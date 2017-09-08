@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Care</string>
+    <string name="enter_mobile_number">Enter Mobile Number</string>
+    <string name="login_button">Login</string>
+    <string name="item_selector_activity_name">Select Items</string>
+    <string name="home_made_food">Home Made Food</string>
+    <string name="packed_food">Packed Food</string>
+    <string name="clothes">Clothes</string>
+    <string name="books">Books</string>
+    <string name="default_country_code">+91</string>
+    <string name="view">View</string>
+    <string name="enter_item_description">Enter Item Description</string>
+    <string name="enter_name">Enter Name</string>
+    <string name="finish">Finish</string>
+    <string name="website">192.168.1.104:8000</string>
+</resources>

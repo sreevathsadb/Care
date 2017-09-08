@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/White"
+    android:id="@+id/ItemSelectionLayout"
+    tools:context="tech.rahulsriram.care.ItemSelectionActivity">
+
+    <ImageView
+        android:layout_marginTop="@dimen/image_horizontal_margin"
+        android:layout_marginBottom="@dimen/image_horizontal_margin"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:id="@+id/homeFoodImage"
+        android:src="@drawable/homemadefood"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/home_made_food"
+        android:layout_alignParentLeft="true" />
+
+    <ImageView
+        android:layout_marginTop="@dimen/image_horizontal_margin"
+        android:layout_marginBottom="@dimen/image_horizontal_margin"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:id="@+id/packedFoodImage"
+        android:src="@drawable/packedfood"
+        android:layout_below="@+id/homeFoodImage"
+        android:contentDescription="@string/packed_food"
+        android:layout_alignParentLeft="true" />
+
+    <ImageView
+        android:layout_marginTop="@dimen/image_horizontal_margin"
+        android:layout_marginBottom="@dimen/image_horizontal_margin"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:id="@+id/clothesImage"
+        android:src="@drawable/clothes"
+        android:layout_below="@+id/packedFoodImage"
+        android:contentDescription="@string/clothes"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/packedFoodSwitch" />
+
+
+    <ImageView
+        android:layout_marginTop="@dimen/image_horizontal_margin"
+        android:layout_marginBottom="5dp"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:id="@+id/booksImage"
+        android:src="@drawable/books"
+        android:layout_below="@+id/clothesImage"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/clothesSwitch"
+        android:contentDescription="@string/books"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/clothesSwitch" />
+
+    <Switch
+        android:layout_marginStart="@dimen/item_switch_marginStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home_made_food"
+        android:textSize="20dp"
+        android:id="@+id/homeFoodSwitch"
+        android:layout_alignTop="@+id/homeFoodImage"
+        android:layout_above="@+id/packedFoodImage"
+        android:layout_toEndOf="@+id/homeFoodImage"
+        android:layout_alignParentEnd="true"
+        android:layout_marginLeft="@dimen/item_switch_marginStart"
+        android:layout_toRightOf="@+id/homeFoodImage"
+        android:layout_alignParentRight="true" />
+
+    <Switch
+        android:textSize="20dp"
+        android:layout_marginStart="@dimen/item_switch_marginStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/packed_food"
+        android:id="@+id/packedFoodSwitch"
+        android:layout_below="@+id/homeFoodSwitch"
+        android:layout_alignEnd="@+id/homeFoodSwitch"
+        android:layout_alignBottom="@+id/packedFoodImage"
+        android:layout_toEndOf="@+id/homeFoodImage"
+        android:layout_marginLeft="@dimen/item_switch_marginStart"
+        android:layout_alignRight="@+id/homeFoodSwitch"
+        android:layout_toRightOf="@+id/homeFoodImage" />
+
+    <Switch
+        android:textSize="20dp"
+        android:layout_marginStart="@dimen/item_switch_marginStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clothes"
+        android:id="@+id/clothesSwitch"
+        android:layout_below="@+id/packedFoodSwitch"
+        android:layout_alignEnd="@+id/packedFoodSwitch"
+        android:layout_alignBottom="@+id/clothesImage"
+        android:layout_toEndOf="@+id/clothesImage"
+        android:layout_marginLeft="@dimen/item_switch_marginStart"
+        android:layout_alignRight="@+id/packedFoodSwitch"
+        android:layout_toRightOf="@+id/clothesImage" />
+
+    <Switch
+        android:textSize="20dp"
+        android:layout_marginStart="@dimen/item_switch_marginStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/books"
+        android:id="@+id/bookSwitch"
+        android:layout_below="@+id/clothesImage"
+        android:layout_alignEnd="@+id/clothesSwitch"
+        android:layout_alignBottom="@+id/booksImage"
+        android:layout_toEndOf="@+id/booksImage"
+        android:layout_marginLeft="@dimen/item_switch_marginStart"
+        android:layout_alignRight="@+id/clothesSwitch"
+        android:layout_toRightOf="@+id/booksImage"
+        android:checked="false" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/donate1"
+        android:id="@+id/donateButton"
+        android:tint="#ffffff"
+        app:backgroundTint="#3f51b4"
+        app:fabSize="normal"
+        app:layout_anchorGravity="end|bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/itemDescription"
+        android:hint="@string/enter_item_description"
+        android:maxLength="140"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/donateButton" />
+</RelativeLayout>
